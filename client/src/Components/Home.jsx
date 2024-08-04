@@ -9,10 +9,10 @@ function Home(){
   const location = useLocation();
   const { id } = location.state || {};
   const [memories, setMemories]=useState([]);
-
+  axios.defaults.withCredentials = true;
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/fetch", { params: { username: id } });
+      const res = await axios.get("https://memory-tinkles.vercel.app/fetch", { params: { username: id } });
       setMemories(res.data.memories);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -24,7 +24,7 @@ function Home(){
   });
 
   async function addMemory(title, description){
-    const res= await axios.post("http://localhost:3000/add",{id,title,description});
+    const res= await axios.post("https://memory-tinkles.vercel.app/add",{id,title,description});
     if(res==="inserted"){
       console.log("inserted");
     }
@@ -35,7 +35,7 @@ function Home(){
   async function deleteMemory(memid){
     console.log(memid)
     console.log(id)
-    const res= await axios.post("http://localhost:3000/delete",{username:id, memid});
+    const res= await axios.post("https://memory-tinkles.vercel.app/delete",{username:id, memid});
     if(res==="deleted"){
       setMemories([]);
       fetchData();
