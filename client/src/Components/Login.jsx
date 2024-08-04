@@ -7,11 +7,12 @@ function Login() {
     const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    axios.defaults.withCredentials = true;
 
     async function handleSubmit(e) {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:3000/", { username, password })
+            await axios.post("https://memory-tinkles.vercel.app/", { username, password })
                 .then((res) => {
                     if (res.data === "exist") {
                         navigate("/home", { state: { id: username } });
