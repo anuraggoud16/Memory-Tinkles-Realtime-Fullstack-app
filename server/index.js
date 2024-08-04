@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors(
     {
-        origin: ["https://memory-tinkles-realtime-fullstack-ijrnyln6b.vercel.app/"],
+        origin: ["https://memory-tinkles-realtime-fullstack-ijrnyln6b.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }
