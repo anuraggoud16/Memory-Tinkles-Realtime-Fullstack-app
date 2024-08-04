@@ -1,0 +1,66 @@
+/* Container for the login form */
+.login-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    margin-top: 50px;
+}
+
+/* Styling for the form title */
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Styling for the form labels */
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Styling for the input fields */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Styling for the submit button */
+.login-container button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #629fdf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-container button[type="submit"]:hover {
+    background-color: #629fdf;
+}
+
+/* Link to the signup page */
+.login-container .signup-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #629fdf;
+    text-decoration: none;
+}
+
+.login-container .signup-link:hover {
+    text-decoration: underline;
+}
