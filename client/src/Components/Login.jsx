@@ -51,7 +51,7 @@ function Login() {
                 <button type="submit">Login</button>
             </form>
             <br />
-            <Link to="/" className="signup-link">Signup Page</Link>
+            <Link to="/" className="signup-link">Want to Signup?</Link>
         </div>
     );
 }
