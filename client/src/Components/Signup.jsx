@@ -7,11 +7,12 @@ function Signup() {
     const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    axios.defaults.withCredentials = true;
 
     async function handleSubmit(e) {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3000/signup", { username, password });
+            const response = await axios.post("https://memory-tinkles.vercel.app/signup", { username, password });
             if (response.data === "exist") {
                 alert("Username exists");
             } else if (response.data === "inserted") {
