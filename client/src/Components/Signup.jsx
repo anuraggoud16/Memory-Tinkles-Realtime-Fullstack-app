@@ -19,7 +19,7 @@ function Signup() {
                 navigate("/home", { state: { id: username } });
             }
         } catch (e) {
-            alert("An error occurred during signup");
+            alert("Try after some time. An error occurred during signup");
             console.log(e);
         }
     }
